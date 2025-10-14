@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std; 
+class Student { 
+private:  
+int rollNumber; // private: cannot be accessed directly outside the class public:  
+string name; // public: can be accessed directly  
+// Public function to set private data     
+void setRollNumber(int r) {         
+rollNumber = r;  
+}  
+// Public function to get private data  
+int getRollNumber() {         
+return rollNumber; 
+} };
+int main() {  
+Student s1;  
+// Accessing public member directly     
+s1.name = "Aditya"; << s1.name << endl;  
+Roll No.:  
+// Accessing private member via public member functions     
+s1.setRollNumber(101);     
+cout << "Roll Number: " << s1.getRollNumber() << endl;  
+2  
+5  
+B  
+6  1  A  I  0  0  1 
+// Uncommenting the line below will cause a compilation error     
+// s1.rollNumber = 200; // ? Not allowed (private member)  
+return 0;  
+}  
